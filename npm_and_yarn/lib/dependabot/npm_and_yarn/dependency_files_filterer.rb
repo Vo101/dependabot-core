@@ -6,8 +6,8 @@ module Dependabot
   module NpmAndYarn
     class DependencyFilesFilterer
       def initialize(dependency_files:, dependencies:)
-        @dependencies = dependencies
         @dependency_files = dependency_files
+        @dependencies = dependencies
       end
 
       def filtered_files

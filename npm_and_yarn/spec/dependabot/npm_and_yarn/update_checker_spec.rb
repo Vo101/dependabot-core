@@ -372,6 +372,7 @@ RSpec.describe Dependabot::NpmAndYarn::UpdateChecker do
             credentials: credentials,
             dependency_files: dependency_files,
             ignored_versions: ignored_versions
+            latest_allowable_version: dependency.version
           ).and_return(dummy_version_resolver)
         expect(dummy_version_resolver).
           to receive(:latest_resolvable_version).
@@ -439,7 +440,8 @@ RSpec.describe Dependabot::NpmAndYarn::UpdateChecker do
             dependency: dependency,
             credentials: credentials,
             dependency_files: dependency_files,
-            ignored_versions: ignored_versions
+            ignored_versions: ignored_versions,
+            latest_allowable_version: dependency.version
           ).and_return(dummy_version_resolver)
         expect(dummy_version_resolver).
           to receive(:latest_resolvable_version).

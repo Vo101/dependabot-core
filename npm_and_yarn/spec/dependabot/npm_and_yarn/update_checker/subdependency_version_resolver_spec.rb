@@ -12,7 +12,8 @@ RSpec.describe namespace::SubdependencyVersionResolver do
       dependency: dependency,
       dependency_files: dependency_files,
       credentials: credentials,
-      ignored_versions: ignored_versions
+      ignored_versions: ignored_versions,
+      latest_allowable_version: dependency.version
     )
   end
 
